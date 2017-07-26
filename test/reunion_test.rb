@@ -27,4 +27,27 @@ class ReunionTest < Minitest::Test
     assert_equal ["Kickball"], reunion.activities
   end
 
+  def test_reunion_total_cost
+    reunion = Reunion.new("Denver")
+    activity_1 = Activity.new("Brunch")
+    activity_1.add_participant("Jim", 20)
+    activity_1.add_participant("Joe", 40)
+    reunion.add_activity(activity_1)
+    assert_equal 60 ,reunion.total_cost
+    activity_2 = Activity.new("Drinks")
+    activity_2.add_participant("Jim", 60)
+    activity_2.add_participant("John", 80)
+    reunion.add_activity(activity_2)
+    assert_equal 200, reunion.total_cost
+  end
+
+  def test_reunion_breakout_for_attendees
+
+  end
+
+  def test_printing_reunion_summary
+
+  end
+
+
 end

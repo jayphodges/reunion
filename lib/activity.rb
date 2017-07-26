@@ -1,4 +1,3 @@
-require 'pry'
 class Activity
 
   attr_reader :name,
@@ -34,8 +33,3 @@ class Activity
   end
 
 end
-# activity = Activity.new("Brunch")
-# activity.add_participant("Jim", 20)
-# activity.add_participant("Joe", 40)
-#
-# binding.pry

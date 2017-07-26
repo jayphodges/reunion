@@ -13,7 +13,7 @@ class Activity
   end
 
   def total_cost
-    sum = []
+    sum = [] # probably not the most elegant way to perform this, but it came to mind quickly and worked.
     @participants.each_pair do |key, value|
       sum << value
     end
